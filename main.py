@@ -104,7 +104,7 @@ class VKBot:
                 year_now = int(datetime.date.today().year)
                 return year_now - year
             elif len(date_list) == 2 or date not in information_list:
-                self.write_msg(user_id, 'Введите верхний порог возраста (max - 65): ')
+                self.write_msg(user_id, 'Введите верхний порог возраста (max - 99): ')
                 for event in self.longpoll.listen():
                     if event.type == VkEventType.MESSAGE_NEW and event.to_me:
                         age = event.text
@@ -284,7 +284,7 @@ class VKBot:
             self.write_msg(user_id, f'Больше фотографий нет')
 
     def found_person_info(self, offset):
-        """ВЫВОД ИНФОРМАЦИИ О НАЙДЕННОМ ПОЛЬЗОВАТЕЛИ"""
+        """ВЫВОД ИНФОРМАЦИИ О НАЙДЕННОМ ПОЛЬЗОВАТЕЛЕ"""
         tuple_person = select(offset)
         list_person = []
         for i in tuple_person:
