@@ -12,7 +12,7 @@ connection.autocommit = True
 
 
 def create_table_users():
-    """СОЗДАНИЕ ТАБЛИЦЫ USERS (НАЙДЕННЫЕ ПОЛЬЗОВАТЕЛИ"""
+    """СОЗДАНИЕ ТАБЛИЦЫ USERS НАЙДЕННЫЕ ПОЛЬЗОВАТЕЛИ"""
     with connection.cursor() as cursor:
         cursor.execute(
             """CREATE TABLE IF NOT EXISTS users(
@@ -26,7 +26,7 @@ def create_table_users():
 
 
 def create_table_seen_users():  # references users(vk_id)
-    """СОЗДАНИЕ ТАБЛИЦЫ SEEN_USERS (ПРОСМОТРЕННЫЕ ПОЛЬЗОВАТЕЛИ"""
+    """СОЗДАНИЕ ТАБЛИЦЫ SEEN_USERS ПРОСМОТРЕННЫЕ ПОЛЬЗОВАТЕЛИ"""
     with connection.cursor() as cursor:
         cursor.execute(
             """CREATE TABLE IF NOT EXISTS seen_users(
